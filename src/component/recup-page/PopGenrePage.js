@@ -59,6 +59,7 @@ const PopGenrePage = () => {
 
         if (response.data && response.data.parse && response.data.parse.text) {
           const pageContent = response.data.parse.text['*'];
+          console.log(pageContent);
           // Extraire le contenu entre les balises h2
           const extractedContent = extractContentBetweenTags(pageContent, 'h2', 'h2', 2,);
           setPopContent(extractedContent);

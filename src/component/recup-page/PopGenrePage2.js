@@ -1,73 +1,128 @@
 import React, { useEffect, useState, useRef } from 'react';
-import axios from 'axios';
-import $ from 'jquery';
+import axios, { all } from 'axios';
+import $, { data } from 'jquery';
+import { sync } from 'framer-motion';
 
-const PopGenrePage = () => {
-  const [popContent, setPopContent] = useState([]);
-  const popContentRef = useRef(null);
+const MenuGenrePage = () => {
+  const [pageContent, setPopContent] = useState('');
+  const pageContentRef = useRef(null);
+  const [currentId, setCurrentId] = useState('Genre_musical'); // ID de la page par défaut
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'https://fr.wikipedia.org/w/api.php?action=parse&format=json&page=Genre_musical&prop=text&origin=*'
+          `https://fr.wikipedia.org/w/api.php?action=parse&format=json&page=${currentId}&prop=text&origin=*` 
+          // lien avec la variable id des cercles avec comme page de base Genre_musical
+          //'https://fr.wikipedia.org/w/api.php?action=parse&format=json&page=' + $(this).data("id") + '&prop=text&origin=*'
         );
 
         if (response.data && response.data.parse && response.data.parse.text) {
-          const pageContent = response.data.parse.text['*'];
-          const $popContent = $("<div>").html(pageContent); // Convertir le texte en éléments jQuery
+          const pageContent = response.data.parse.text["*"]
+          let $popContent = $('<div>').html(pageContent);
+          $popContent = $popContent.find('td').first();
+                  
+          $popContent.find("a").replaceWith(function () {
+            const href = $(this).attr("href");
+            if (href) {
+              console.log(href.substring(6));
+              let elt = $("<div>").addClass("circle").attr("id", href.substring(6)).attr("data-id", href.substring(6)).append($("<p>").append($(this).contents()));
+              console.log(elt.data("id"))
+              return elt;
+            }
+            return "";
+          });
+          
 
-          //convertir les balise en a en p
-         //$popContent.find("a").replaceWith(function() { return $("<div>").addClass("circle").append($("<p>").append($(this).contents())); });
 
-          $popContent.find("td").find("div:last").remove(); // supprimer le dernier div
-
-
-          // supprimer les nodetype 3
+          // // supprimer les nodetype 3
           $popContent.find("td").contents().filter(function() {
             return this.nodeType === 3;
           }
           ).remove();
           
           // Utiliser jQuery pour extraire le contenu entre les balises h2 "Histoire" et la prochaine balise h2
-          //const extractedContent = $popContent.find("div").nextUntil("div").clone();
-          const extractedContent = $popContent.find("td:first").clone();
+          // const extractedContent = $popContent.find("infobox_v3").nextUntil("div").clone();
+          
+          // supprimer le dernier cercle
+          const extractedContent = $popContent.find("div").clone().slice(0, -1);
+          
 
           // Récupérer les balises h2 "Histoire" également
-          const h2Elements = $popContent.find("h2").clone();
+          // const h2Elements = $popContent.find("h2").clone();
+
 
           // Mettre à jour le contenu d'affichage
           setPopContent([ ...extractedContent.toArray()]);
         }
+        $("div").each(function() {
+          console.log($(this).data("id"));
+        });
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
 
     fetchData();
-  }, []);
-
-
-
+    
+  }, [currentId]);
+  
   useEffect(() => {
-    if (popContent.length > 0 && popContentRef.current) {
-      popContentRef.current.innerHTML = ''; // Effacer le contenu précédent
+    if (pageContent.length > 0 && pageContentRef.current) {
+      pageContentRef.current.innerHTML = ''; // Effacer le contenu précédent
 
       // Ajouter chaque élément au DOM
-      popContent.forEach(element => {
-        popContentRef.current.appendChild(element);
+      pageContent.forEach(element => {
+        pageContentRef.current.appendChild(element);
+
+      // Gérez les clics sur les cercles générés par jQuery
+      const clickableCircles = document.querySelectorAll('.circle');
+      clickableCircles.forEach(circle => {
+        circle.addEventListener('click', (e) => {
+          console.log("id : " + circle.getAttribute('data-id') + "");
+          const circleId = circle.getAttribute('data-id');
+          if (circleId) {
+              const fetchData = async () => {
+              try {
+                const response = await axios.get(
+                  `https://fr.wikipedia.org/w/api.php?action=parse&format=json&page=${circleId}&prop=text&origin=*` 
+                );
+                if (response.data && response.data.parse && response.data.parse.text) {
+                  const pageContent = response.data.parse.text["*"]
+                  let $popContent = $('<div>').html(pageContent);
+                  $popContent = $popContent.find('.infobox_v3');
+                  console.log($popContent.text(), pageContent);                
+               
+                            
+                  // supprimer le dernier cercle
+                  const extractedContent2 = $popContent.find("div");
+                
+                  setPopContent([ ...extractedContent2.toArray()]);
+                }
+                $("div").each(function() {
+                  console.log($(this).data("id"));
+                });
+              } catch (error) {
+                console.error('Error fetching data:', error);
+              }}
+              fetchData ();
+          }
+        });
+        });
       });
     }
-  }, [popContent]);
+  }, [pageContent]);
 
   return (
     <div>
       <h1>Pop Music Wikipedia Info</h1>
-      <div className="pop-content" ref={popContentRef}/>
+      <div className="pop-content" ref={pageContentRef} dangerouslySetInnerHTML={{ __html: pageContent }}/>
       <style>
         {`
           /* Ajoutez vos styles CSS personnalisés ici */
           .pop-content {
+            display: flex;
+            flex-wrap: wrap;
             margin: 20px;
             padding: 10px;
             border: 1px solid #ccc;
@@ -83,6 +138,7 @@ const PopGenrePage = () => {
             justify-content: center;
             align-items: center;
             margin: 10px;
+            cursor: pointer; // Ajoutez un curseur pointer pour les rendre cliquables
           }
         `}
       </style>
@@ -90,4 +146,4 @@ const PopGenrePage = () => {
   );
 };
 
-export default PopGenrePage;
+export default MenuGenrePage;
