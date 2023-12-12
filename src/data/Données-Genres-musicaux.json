@@ -3,7 +3,8 @@
       "style": "Blues",
       "infos": {
         "titre": "Blues",
-        "photo": "lien_vers_une_image_blues.jpg",
+        "photo": ["../../media/Blues/B.B._King.jpg", "../../media/Blues/Bob_Dylan_in_November_1963.jpg", "../../media/blues/Guitare_blues_chicago.jpg", "../../media/blues/Taj_Mahal_(musician).jpg"],
+        "alt": ["B.B. King", "Bob Dylan", "Guitare blues", "Taj Mahal"],
         "contexte": "Le blues est un genre musical américain qui tire son origine de diverses influences folkloriques, notamment africaines, asiatiques par l'intermédiaire des Amérindiens, et irlandaises. Son usage dans la musique noire américaine remonte au début du XXe siècle, notamment dans le vaudeville, et était déjà courant au XIXe siècle dans les pièces de théâtre mettant en scène des Noirs du Sud des États-Unis. W.C. Handy a joué un rôle important en officialisant le blues avec sa composition 'Memphis Blues' en 1912.",
         "histoire": "Trente ans après l'abolition de l'esclavage, les negro-spirituals et les chants de travail se mêlent dans le Sud des États-Unis, notamment au Mississippi, en Géorgie et au Texas, rythmant la vie des travailleurs des plantations et des nuits de danse. En parallèle, des minstrel shows apparaissent à la Nouvelle-Orléans et à Memphis, réunissant des artistes noirs. Le blues, qui a ses racines dans le Sud à la fin du XIXe et au début du XXe siècle, est souvent de nature orale et accompagné d'instruments rudimentaires. Les formes plus élaborées émergent dans la région du Delta, entre le Mississippi et la rivière Yazoo. D'autres variantes incluent le 'Fife and drums' dans les collines du Mississippi, avec un fifre en bambou dirigé par Othar Turner, ainsi que des instruments simples comme la guitare acoustique, le piano et l'harmonica. Robert Johnson, légendaire guitariste de blues, est associé à une histoire de pacte avec le diable pour sa virtuosité. D'autres bluesmen comme Tommy Johnson partagent une version similaire. W. C. Handy est l'un des premiers à populariser et à arranger des airs de blues avec des orchestres, et il est l'auteur de morceaux célèbres tels que 'Saint Louis Blues.' Au niveau des paroles, les premiers blues répétaient souvent un vers plusieurs fois. Au début du XXe siècle, la structure 'E/A/B' (Mi/La/Si) devient courante, où un vers est chanté sur les quatre premières mesures, puis répété sur les quatre suivantes, suivi d'un second vers sur les quatre dernières mesures. Un exemple typique est : « Woke up this morning with the Blues down in my soul / Woke up this morning with the Blues down in my soul / My baby gone and left me, got a heart as black as coal ».",
         "sousGenre": ["Blues traditionnel", "Kansas City blues", "Delta blues", "Chicago blues", "Texas blues", "New York blues", "British blues boom", "Blues rock", "Blues français", "Memphis blues", "West coast blues"],
@@ -14,18 +15,20 @@
       "style": "Chanson française",
       "infos": {
         "titre": "Chanson française",
-        "photo": "lien_vers_une_image_chanson_francaise.jpg",
+        "photo": ["../../media/Chanson-francaise/Edith_Piaf.jpg", "../../media/Chanson-francaise/Johnny_Hallyday.jpg", "../../media/Chanson-francaise/Dalida_Senigallia.jpg", "../../media/Chanson-francaise/Jean-Jacques_Goldman.jpg", "../../media/Chanson-francaise/Mylene_farmer.jpg", "../../media/Chanson-francaise/Celine_Dion.jpg", "../../media/Chanson-francaise/Stromae.jpg"],
+        "alt": ["Edith Piaf", "Johnny Hallyday", "Dalida", "Jean-Jacques Goldman", "Mylène Farmer", "Céline Dion", "Stromae"],
         "contexte": "La chanson française a évolué à partir de diverses influences musicales au fil des siècles. Initialement basée sur des éléments du folklore, de la chasse, de la musique militaire, religieuse et classique, elle a connu une transformation significative avec l'avènement des droits d'auteur au xixe siècle et le développement des enregistrements sonores au xxe siècle. Elle a été influencée par divers courants musicaux à la mode, tels que le musette (valse, java, tango), la musique latino-américaine (cha-cha-cha, rumba, mambo, samba, bossa nova), ainsi que des adaptations de succès étrangers (italiens, ibériques, britanniques, slaves, germaniques) et des importations massives de la culture nord-américaine, y compris le jazz (ragtime, charleston, swing), le blues, le gospel, la country, le doo-wop, le rock, le folk, la pop, le disco et le rap.",
         "histoire": "La chanson française évolue à travers les époques, de la Cantilène de sainte Eulalie du ixe siècle au Carillon de Vendôme du xve siècle. Au début du Moyen Âge, les premières manifestations de la chanson incluent les chants de guerre de l'Empire franc, les chants folkloriques, et les chants choraux, certains ayant des racines pré-chrétiennes. La Chanson de Roland est notable pour son rôle dans la guerre contre les païens. La culture de la chanson au sens restreint débute au haut Moyen Âge, avec les premières chansons de divertissement françaises datant du xiie siècle, notamment les chansons de geste, qui coïncident avec les Croisades. Les troubadours, principalement issus de la chevalerie, développent une forme de chanson courtoise, tandis que dans le Nord de la France, on les appelle trouvères.",
-        "sousGenre": [],
-        "instrument": []
+        "sousGenre": ["Chanson réaliste", "Chanson à texte", "Chanson pop", "Chanson romantique", "Chanson engagée", "Chanson humoristique"],
+        "instrument": ["Accordéon", "Guitare", "Violon", "Flûte", "Piano"]
       }
     },
     {
       "style": "Dubstep",
       "infos": {
         "titre": "Dubstep",
-        "photo": "lien_vers_une_image_dubstep.jpg",
+        "photo": ["../../media/Dubstep/Skream.jpg", "../../media/Dubstep/DJ_Mary_Anne_Hobbs.jpg"],
+        "alt": ["Skream", "DJ Mary Anne Hobbs"],
         "contexte": "Le dubstep est un genre de musique électronique originaire du sud de Londres, à Croydon, émergé à la fin des années 1990. Il est influencé par divers styles musicaux tels que le 2-step garage, le broken beat, le drum and bass, le jungle, le dub et le reggae, avec des racines remontant aux sound systems jamaïcains des années 1980 au Royaume-Uni. Cette musique se caractérise par un rythme syncopé, des percussions et une ligne de basses, et les premières compositions datent de 1996, souvent en face B des albums 2-step garage. Ces compositions sont marquées par un thème sombre, une approche musicale expérimentale et minimaliste, avec moins d'accent sur les voix et des influences du breakbeat et du drum and bass en 2-step.",
         "histoire": "Le dubstep trouve ses racines dans les productions d'El-B, Steve Gurley, Oris Jay et Zed Bias en 1999 et 2000. Le terme 'dubstep' a été popularisé vers 2002 par Ammunition Promotions, un label de Drum & Bass qui organisait la boîte de nuit 'Forward>>'. Cette soirée s'est déroulée initialement aux Velvet Rooms de Soho, puis au Plastic People de Shoreditch à Londres. Fondée en 2001, Forward>> a joué un rôle clé dans le développement du dubstep en fournissant un espace dédié à ce genre musical, tout en mêlant des influences de dark garage. Forward>> avait une résidence sur Rinse FM, présentée par Kode9. Les DJ originaux de Forward>> incluaient Hatcha, Youngsta, Kode 9, Zed Bias, Oris Jay, Slaughter Mob, Jay Da Flex, Slimzee, et d'autres, ainsi que des artistes notables du domaine musical. Parmi les résidents ultérieurs, on retrouve Youngsta, Hatcha, Geeneus, et Plastician, avec Crazy D en tant que MC/présentateur. Des producteurs comme D1, Skream et Benga étaient également fréquents. Une autre influence majeure dans les débuts du dubstep est le disquaire Big Apple Records à Croydon. Des musiciens clés comme Hatcha et Skream y ont travaillé, initialement orientés vers la vente d'albums de UK hardcore, techno, house, garage, et drum and bass, avant de s'orienter vers le dubstep naissant. D'autres artistes tels qu'El-B, Zed Bias, Horsepower Productions, Plastician, N Type, et Walsh fréquentaient régulièrement ce magasin, bien qu'il soit désormais fermé.",
         "sousGenre": ["Brostep", "post-dubstep", "breakstep", "gorestep", "melodic dubstep", "heavy dubstep", "riddim", "deathstep"],
@@ -36,9 +39,10 @@
       "style": "Drum and bass",
       "infos": {
         "titre": "Drum and bass",
-        "photo": "lien_vers_une_image_drum_and_bass.jpg",
+        "photo": ["../../media/Drum_and_bass/pendulum.jpeg", "../../media/Drum_and_bass/chase-and-status.jpg", "../../media/Drum_and_bass/Netsky.png"],
+        "alt": ["Pendulum", "Chase and Status", "Netsky"],
         "contexte": "La drum and bass, également connue sous le nom de DnB, est un genre de musique électronique originaire du Royaume-Uni, apparu vers 1996-1997 à Bristol, marquant la fin de l'ère jungle. Elle se caractérise par un rythme breakbeat, une structure rythmique 2-step et des lignes de basse lourdes à basse fréquence. La mélodie est généralement minimale, mettant l'accent sur les percussions répétitives. Souvent accompagnée de textes rapides et rythmés par un MC, la drum and bass est jouée en clubs et parfois lors de free parties. Elle puise son inspiration dans divers genres musicaux tels que le jazz, le ragga, le funk, la soul, la techno, le hip-hop et même la musique classique, en utilisant des échantillons. Cette diversité sonore permet d'exprimer une large gamme d'émotions, tandis que le tempo oscille généralement entre 160 et 190 BPM. La stabilité du tempo est un élément essentiel pour les DJs. Quelques artistes et labels influents en 2015 étaient Andy C (fondateur du label RAM), Friction (fondateur du label Shogun LTD), London Elektricity (fondateurs du label Hospital), Noisia (fondateurs du label Vision) et Goldie (fondateur de Metalheadz).",
-        "histoire": "",
+        "histoire": "La Drum and Bass est un genre musical électronique qui a émergé au Royaume-Uni au début des années 1990, découlant de la scène rave et de la jungle. Elle se caractérise par des rythmes rapides, des lignes de basse puissantes et l'utilisation de breakbeats, ainsi que l'incorporation de samples de divers genres musicaux. Des artistes comme Goldie, LTJ Bukem et Roni Size ont joué un rôle clé dans son développement. La Drum and Bass a évolué en divers sous-genres et reste un pilier de la scène électronique mondiale aujourd'hui.",
         "sousGenre": ["Drumstep", "breakcore", "darkstep", "darkcore", "drill and bass", "drumfunk", "hardstep", "jazzstep", "jump-up", "liquid funk", "neurofunk", "techstep"],
         "instrument": ["Synthétiseur", "boîte à rythmes", "séquenceur", "clavier", "sampler", "platine"]
       }
@@ -47,11 +51,12 @@
       "style": "Easy listening",
       "infos": {
         "titre": "Easy listening",
-        "photo": "lien_vers_une_image_easy_listening.jpg",
+        "photo": ["../../media/Easy_listening/image.jpg"],
+        "alt": [""],
         "contexte": "L'easy listening est une approche musicale axée sur des mélodies simples et accrocheuses, des chansons douces et élégantes, ainsi que des rythmes adaptés à la danse de salon. C'est davantage une sensibilité musicale qu'un genre précis, englobant des artistes du 20e siècle ainsi que certains associés à la musique électronique.",
         "histoire": "Easy listening, contrairement à la musique d'ambiance, est une désignation neutre qui englobe divers genres musicaux, y compris le jazz mélodique qualifié de smooth jazz. Des artistes éminents tels que Burt Bacharach sont des figures de proue de ce style, et on trouve des exemples de easy listening dans une variété de genres musicaux. Cependant, certains artistes notables du genre strict d'easy listening, tels que Burt Bacharach, Henry Mancini, Arthur Lyman, et Walter Wanderley, ne sont pas inclus dans cette catégorie.",
-        "sousGenre": [],
-        "instrument": []
+        "sousGenre": ["Lounge", "Exotica", "Space age pop"],
+        "instrument": ["Piano", "saxophone", "orchestre"]
       }
     },
     {
@@ -61,8 +66,8 @@
         "photo": "lien_vers_une_image_electronic_dance_music.jpg",
         "contexte": "L'EDM, acronyme pour l'Electronic Dance Music, englobe une diversité de genres électroniques conçus pour la danse et joués principalement en discothèques. Elle est mixée par des DJs qui fusionnent plusieurs chansons lors de mixsets. L'expression 'DM' est un terme en vogue dans l'industrie musicale américaine, équivalant à l'Eurodance en Europe, mais elle englobe en réalité divers sous-genres de musique électronique destinés à la danse.",
         "histoire": "D'illustres exemples de ce style incluent la collaboration de Giorgio Moroder et de la chanteuse Donna Summer en 1977 pour 'I Feel Love', une chanson dance révolutionnaire sans instruments traditionnels. De plus, Kraftwerk et Yellow Magic Orchestra à la fin des années 1970 et au début des années 1980, ainsi que les genres émergents des années 1980 comme la new wave, l'electro, la house de Chicago et la techno de Détroit, sont également des pionniers de cette variété de musique dance.",
-        "sousGenre": [],
-        "instrument": []
+        "sousGenre": ["House", "Techno", "Trance", "Drum and Bass", "Dubstep", "Electro", "Breakbeat", "Hardcore", "Ambient", "Progressive House"],
+        "instrument": ["Synthétiseurs", "Boîtes à rythmes", "Échantillonneurs", "Claviers MIDI"]
       }
     },
     {
@@ -127,8 +132,8 @@
         "photo": "lien_vers_une_image_musique_classique.jpg",
         "contexte": "",
         "histoire": "",
-        "sousGenre": [],
-        "instrument": []
+        "sousGenre": ["Baroque", "Classique", "Romantique", "Moderne", "Contemporain"],
+        "instrument": ["Orchestre symphonique", "violon", "piano", "flûte", "violoncelle"]
       }
     },
     {
@@ -138,8 +143,8 @@
         "photo": "lien_vers_une_image_musique_country.jpg",
         "contexte": "La musique country est un genre musical fusionnant des influences traditionnelles du sud-est des États-Unis, des provinces maritimes du Canada, de l'Europe (notamment Irlande et Pays-Bas), et d'autres pays comme l'Australie. Ses racines sont variées, mêlant des éléments folkloriques européens, la musique chrétienne, le gospel noir, le yodel suisse allemand, et une gamme d'instruments tels que la mandoline, la lap-steel hawaïenne et le banjo africain. On la qualifie parfois de 'blues des blancs' en raison de ses origines partagées entre musiciens noirs et blancs. Elle a également influencé le rock et d'autres genres musicaux. La musique country a une vaste base de fans, en particulier aux États-Unis, au Canada et en Australie, ainsi qu'en Europe, notamment en Irlande, dans les pays scandinaves et en Allemagne. Nashville, Tennessee, est le centre emblématique de la musique country, surnommée 'Music-City' en raison de ses nombreux studios d'enregistrement et de ses musiciens de qualité. Le Grand Ole Opry de Nashville reste un objectif majeur pour les artistes country, et des festivals de musique et de danse country sont organisés dans le monde entier.",
         "histoire": "Aux XVIIe et XVIIIe siècles, des immigrants européens arrivent en Amérique du Nord avec leur culture et leurs instruments musicaux, formant diverses communautés. Au XIXe siècle, ces communautés fusionnent leurs influences, donnant naissance à une musique unique dans les Appalaches. Le Texas devient un centre de développement pour la musique country grâce à des interactions entre différents groupes ethniques. Dans les années 1920, des enregistrements commerciaux marquent le début de la reconnaissance de la musique country. Les années 1930 et 1940 voient la popularisation de cette musique grâce aux 'Singing Cowboys' du cinéma. Les années 1950 introduisent le 'Nashville sound', un son plus commercial. La musique country évolue avec le 'country soul' et le 'Bakersfield sound'. Dans les années 1970, les 'Outlaws' cherchent à se démarquer du Nashville Sound. Les années 1990 voient l'émergence du 'new country' avec des artistes comme Garth Brooks et les Dixie Chicks. Les années 2000 et 2010 voient des artistes de rock et de pop s'essayer à la musique country, tandis que des artistes comme Carrie Underwood remportent des Grammy Awards et contribuent à populariser le genre.",
-        "sousGenre": [],
-        "instrument": []
+        "sousGenre": ["Bluegrass", "Country pop", "Country rock", "Honky-tonk", "Outlaw country", "Texas country", "Western swing"],
+        "instrument": ["Guitare acoustique", "violon", "steel guitar", "banjo", "harmonica", "mandoline"]
       }
     },
     {
@@ -160,8 +165,8 @@
         "photo": "lien_vers_une_image_musique_expérimentale.jpg",
         "contexte": "",
         "histoire": "",
-        "sousGenre": [],
-        "instrument": []
+        "sousGenre": ["Musique concrète", "Ambient", "Glitch", "Musique bruitiste", "Acousmatique", "Improvisation libre", "Électroacoustique", "Minimalisme", "Art sonore", "Musique électronique expérimentale"],
+        "instrument": ["Synthétiseurs", "Bandes magnétiques", "Ordinateurs", "Électronique"]
       }
     },
     {
@@ -268,10 +273,10 @@
       "infos": {
         "titre": "RnB contemporain",
         "photo": "lien_vers_une_image_rnb_contemporain.jpg",
-        "contexte": "",
-        "histoire": "",
-        "sousGenre": [],
-        "instrument": []
+        "contexte": "Le RnB contemporain, abrégé en R'n'B, est un genre musical né dans les années 1980 aux États-Unis. Il mélange des éléments du rhythm and blues, du hip-hop, de la soul, de la pop et du funk, devenant prédominant dans les années 2000.",
+        "histoire": "Le RnB, abréviation de musique populaire afro-américaine, est un genre musical axé sur la danse avec des ballades. Apparu aux États-Unis dans les années 1980, il est devenu très populaire dans les années 1990. Les chanteuses sont nombreuses, influencées par le Girl Power. Le RnB, originaire de la soul et du gospel, a influencé le rap et vice versa, ce qui rend parfois difficile de catégoriser certains artistes. La première chanson RnB notoire est 'Rock With You' de Michael Jackson en 1979. Fun Radio l'a qualifié de 'groove' entre 1999 et 2004.",
+        "sousGenre": ["Quiet storm", "RnB alternatif"],
+        "instrument": ["Synthétiseur", "clavier", "chant", "boîte à rythmes", "piano", "talkbox"]
       }
     },
     {
@@ -279,10 +284,10 @@
       "infos": {
         "titre": "Rock",
         "photo": "lien_vers_une_image_rock.jpg",
-        "contexte": "",
-        "histoire": "",
-        "sousGenre": [],
-        "instrument": []
+        "contexte": "Le RnB contemporain est un genre musical américain mêlant rhythm and blues, hip-hop, soul, pop, et funk. Il a émergé dans les années 1980, devenant dominant dans les années 2000. Le rock, apparu dans les années 1950 aux États-Unis, a des racines dans le rock 'n' roll, influencé par le rhythm and blues et la country. Il englobe divers sous-genres, notamment le psychédélique, le garage rock, le punk, le grunge, et le rock alternatif. Il est caractérisé par une mélodie vocale, des guitares, une basse et une batterie, souvent accompagnés d'autres instruments. Les paroles ont influencé des mouvements sociaux et culturels et ont été un moyen de révolte contre le conformisme.",
+        "histoire": "Le rock a évolué depuis ses débuts dans les années 1950 en mélangeant diverses influences musicales, donnant naissance à de multiples sous-genres et évolutions. Des artistes tels que Elvis Presley et Chuck Berry ont contribué à son essor initial. Dans les années 1960, les Beatles ont poussé le rock vers la pop, tandis que le mouvement punk a apporté une énergie rebelle dans les années 1970. Les années 1980 ont vu des changements dans le son du rock, avec des groupes comme Dire Straits et The Smiths. Les années 1990 ont été marquées par des influences bruitistes et des groupes tels que les Smashing Pumpkins. Au début des années 2000, le rock garage des années 1960 est revenu à la mode avec des groupes comme The White Stripes et The Strokes. Le rock a continué à évoluer avec des influences indie, folk, et d'autres genres. Cependant, ces dernières années, le rock a perdu de sa prédominance, et les frontières entre les genres musicaux se sont estompées, reflétant une diversité musicale croissante. Selon Rolling Stone en 2022, le rock et la pop ont évolué et continuent de se redéfinir constamment.",
+        "sousGenre": ["Art rock", "garage rock", "glam rock", "grunge", "hard rock", "heavy metal", "krautrock", "punk rock", "rockabilly", "rock alternatif", "rock expérimental", "rock progressif", "rock psychédélique", "rock sudiste", "soft rock", "surf rock", "Afro Rock", "Rock créole"],
+        "instrument": ["Guitare électrique", "basse", "batterie", "piano", "chant", "claviers"]
       }
     },
     {
@@ -290,10 +295,10 @@
       "infos": {
         "titre": "Tekno",
         "photo": "lien_vers_une_image_tekno.jpg",
-        "contexte": "",
-        "histoire": "",
-        "sousGenre": [],
-        "instrument": []
+        "contexte": "La tekno, parfois appelée freetekno, est un sous-genre rapide de la musique techno, joué principalement lors des free parties en Europe. Elle se distingue par son rythme plus rapide, variant de 150 à 185 bpm, et une grosse caisse répétitive, contrairement à la techno qui se situe entre 130 et 150 bpm. Bien que la distorsion de la grosse caisse soit moins fréquente que dans le hardcore, certains producteurs incorporent des éléments trance en raison des liens étroits entre la sous-culture tekno et la psytrance. Le terme 'tekno' est utilisé pour différencier ce genre de la techno traditionnelle.",
+        "histoire": "La Tekno, émergeant dans les années 1990, s'inspire du Teknival et du rap en croissance. Elle fusionne hardcore, rave, jungle et techno, produite avec divers outils, y compris des ordinateurs portables. Évoluant en de multiples sous-genres comme le hardtek, elle provient de toute l'Europe. Les artistes, tels que Spiral Tribe, suivent une idéologie non commerciale, utilisent des pseudonymes et encouragent la distribution gratuite, rappelant un 'retour aux sources'. Des labels clés comprennent Hokus Pokus, Tek No Logique, Narkotek, et Astrofonik.",
+        "sousGenre": ["Jungletek", "Raggatek"],
+        "instrument": ["boîtes à rythmes", "synthétiseurs", "claviers", "séquenceurs audio/MIDI", "trackers"]
       }
     }
 ]

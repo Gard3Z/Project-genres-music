@@ -1,0 +1,126 @@
+body {
+    --black: #000000;
+    --ash-black: #222;
+    --white: #fafafa;
+    --sky: #00ccff;
+    --green: #22dddd;
+    --blue: #1300ff;
+    --dusk: #6600ff;
+    --purple: #9900ff;
+    --pink: #ff0066;
+    --red: #fe0222;
+    --orange: #fd7702;
+    --yellow: #ffbb00;
+  
+    --accent: var(--white);
+    
+  
+    color: var(--accent);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 500px;
+    background: linear-gradient(180deg, #70f, #40f);
+    
+}
+  
+.example-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;   
+}
+  
+.box {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--accent);
+    z-index: 1000;
+}
+  
+.GenreName {
+    text-align: center;
+    vertical-align: middle;
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 1000;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 200px; 
+    color: #f8f8f846;
+}
+
+.circle-histoire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+    background: none;
+    border: 10px solid #f8f8f8;
+    position: absolute;
+    right: 7%;
+}
+
+.histoire {
+    text-align: center;
+    position: absolute;
+}
+
+.circle-instruments {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+    background: none;
+    border: 10px solid #f8f8f8;
+    position: absolute;
+    left: 7%;
+}
+
+.instruments {
+    text-align: center;
+    position: absolute;
+    font-size: 1.4em;
+}
+
+.circle-sousgenre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: none;
+    border: 10px solid #f8f8f8;
+    position: absolute;
+    top: 3%;
+}
+
+.sous-genre {
+    text-align: center;
+    position: absolute;
+    font-size: 1.4em;
+}

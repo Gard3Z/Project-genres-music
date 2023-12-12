@@ -1,0 +1,102 @@
+.container-modal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    height: 90vh;
+    margin: 0 auto;
+    position: relative;   
+}
+
+.container-modal-gauche {
+    width: 100%; /* Assurez-vous que la div occupe toute la largeur disponible */
+    overflow-y: scroll; /* Activez la barre de défilement verticale */
+    border-radius: 5% 0 0 5%;
+    padding-bottom: 5%;
+}
+  
+  .container-modal-gauche::-webkit-scrollbar {
+    width: 10px; /* Largeur de la barre de défilement */
+}
+  
+  .container-modal-gauche::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color); /* Utilisez la variable CSS personnalisée pour la couleur de la poignée */
+    border-radius: 5px; /* Coins arrondis de la poignée */
+}
+
+/* SelectionInfoDroite.css */
+
+.container-modal-droite {
+    width: 100%; /* Assurez-vous que la div occupe toute la largeur disponible */
+    overflow-y: scroll; /* Activez la barre de défilement verticale */
+    direction: rtl; /* Inverser la direction du défilement (de droite à gauche) */
+    border-radius: 0 5% 5% 0;
+}
+  
+.container-modal-droite::-webkit-scrollbar {
+    width: 10px; /* Largeur de la barre de défilement */
+}
+  
+.container-modal-droite::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color); /* Utilisez la variable CSS personnalisée pour la couleur de la poignée */
+    border-radius: 5px; /* Coins arrondis de la poignée */
+}
+  
+.photos {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.croix {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3%;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+#info-droite-titre {
+    color: black;
+    font-size: 3em;
+    text-align: center;
+    margin-left: 5%;
+    line-height: normal;
+    margin-top: 5%;
+}
+
+#info-droite-sous-titre {
+    color: black;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 1000;
+    margin: 5% 0 0 5%;
+    padding: 0;
+    text-align: start;
+    vertical-align: middle;
+}
+
+#info-droite-texte {
+    color: black;
+    font-size: 1em;
+    margin-left: 5%;
+    text-align: start;
+    line-height: normal;
+    text-align: justify;
+    padding: 0 4% 0 4%;
+}
+
+.container-modal-droite>div {
+    position: relative;
+}
+
+.alt {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.5rem;
+    z-index: 2;
+    color: #f8f8f8;
+    margin: 0%;
+    margin-right: 1%;
+    font-weight: 1000;
+}

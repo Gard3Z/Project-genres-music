@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import axios, { all } from 'axios';
 import $, { data } from 'jquery';
-import { sync } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const MenuGenrePage = () => {
   const [pageContent, setPopContent] = useState('');
@@ -20,7 +20,7 @@ const MenuGenrePage = () => {
         if (response.data && response.data.parse && response.data.parse.text) {
           const pageContent = response.data.parse.text["*"]
           let $popContent = $('<div>').html(pageContent);
-          $popContent = $popContent.find('td').first();
+          $popContent = $popContent.find('td').first(); // Récupérer le premier élément td
                   
           $popContent.find("a").replaceWith(function () {
             const href = $(this).attr("href");
@@ -42,7 +42,7 @@ const MenuGenrePage = () => {
           ).remove();
           
           // Utiliser jQuery pour extraire le contenu entre les balises h2 "Histoire" et la prochaine balise h2
-          // const extractedContent = $popContent.find("infobox_v3").nextUntil("div").clone();
+          // const extractedContent = $popContent.find("infobox_v3").nextUntil("div").clone(); 
           
           // supprimer le dernier cercle
           const extractedContent = $popContent.find("div").clone().slice(0, -1);
@@ -82,30 +82,7 @@ const MenuGenrePage = () => {
           console.log("id : " + circle.getAttribute('data-id') + "");
           const circleId = circle.getAttribute('data-id');
           if (circleId) {
-              const fetchData = async () => {
-              try {
-                const response = await axios.get(
-                  `https://fr.wikipedia.org/w/api.php?action=parse&format=json&page=${circleId}&prop=text&origin=*` 
-                );
-                if (response.data && response.data.parse && response.data.parse.text) {
-                  const pageContent = response.data.parse.text["*"]
-                  let $popContent = $('<div>').html(pageContent);
-                  $popContent = $popContent.find('.infobox_v3');
-                  console.log($popContent.text(), pageContent);                
-               
-                            
-                  // supprimer le dernier cercle
-                  const extractedContent2 = $popContent.find("div");
-                
-                  setPopContent([ ...extractedContent2.toArray()]);
-                }
-                $("div").each(function() {
-                  console.log($(this).data("id"));
-                });
-              } catch (error) {
-                console.error('Error fetching data:', error);
-              }}
-              fetchData ();
+            // setCurrentId(circleId);
           }
         });
         });
@@ -123,22 +100,32 @@ const MenuGenrePage = () => {
           .pop-content {
             display: flex;
             flex-wrap: wrap;
+            height: 100%;            
             margin: 20px;
             padding: 10px;
-            border: 1px solid #ccc;
-            background-color: #f7f7f7;
             color: #333;
           }
           .circle {
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            background: #ccc;
+            background: rgba(255, 255, 255, 0.3);
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 10px;
             cursor: pointer; // Ajoutez un curseur pointer pour les rendre cliquables
+          }
+          .circle:hover {
+            background: #fff;
+            scale: 1.1;
+          }
+          h1 {
+            margin: 0;
+          p {
+            text-align: center;
+            font-size: 12px;
+            margin: 0.5em;
           }
         `}
       </style>
