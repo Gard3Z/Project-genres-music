@@ -56,71 +56,42 @@ body {
     font-weight: 500;
 }
 
-h2 {
-    font-size: 2em;
-    font-weight: 1000;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 200px; 
-    color: #f8f8f846;
-}
 
-.circle-histoire {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 200px;
-    border-radius: 5%;
-    background: none;
-    border: 10px solid #f8f8f8;
-    position: absolute;
-    right: 7%;
-}
 
 .histoire {
-    text-align: center;
     position: absolute;
-}
-
-.circle-instruments {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 200px;
-    border-radius: 5%;
-    background: none;
-    border: 10px solid #f8f8f8;
-    position: absolute;
-    left: 7%;
+    font-size: 4vh;
+    font-weight: 1000;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #f8f8f846;
+    right: 5%;
 }
 
 .instruments {
-    text-align: center;
     position: absolute;
-    font-size: 1.4em;
-}
-
-.circle-sousgenre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: none;
-    border: 10px solid #f8f8f8;
-    position: absolute;
-    top: 3%;
+    font-size: 4vh;
+    font-weight: 1000;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #f8f8f846;
+    left: 5%;
 }
 
 .sous-genre {
-    text-align: center;
     position: absolute;
-    font-size: 1.4em;
+    font-size: 4vh;
+    font-weight: 1000;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #f8f8f846;
+    top: 15%; /* Place le sous-genre en haut */
+    rotate: -90deg;
+}
+
+.maison {
+    position: absolute;
+    width: 5%;
+    color: #f8f8f846;
+    bottom: 10%; /* Place le sous-genre en haut */
 }
