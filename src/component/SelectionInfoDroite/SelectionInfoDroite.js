@@ -14,7 +14,9 @@ const RightEdgeInfo = ({ styleData, onCloseClick, resetBoxSize }) => {
   return (
     <section className="container-modal">
       <div id="container-modal-gauche" className="container-modal-gauche">  
-        <h2 id="info-droite-titre">{styleData.infos.titre}</h2>
+        <div className="container-info-droite-titre">
+          <h2 id="info-droite-titre">{styleData.infos.titre}</h2>
+        </div>
         <h3 id="info-droite-sous-titre">Un peu de contexte</h3>
         {/* Utilisez styleData pour accéder aux données JSON */}
         <p id="info-droite-texte">{styleData.infos.contexte}</p>

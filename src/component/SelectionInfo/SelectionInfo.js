@@ -6,6 +6,7 @@ import LeftEdgeInfo from "../SelectionInfoGauche/SelectionInfoGauche";
 import RightEdgeInfo from "../SelectionInfoDroite/SelectionInfoDroite";
 import TopEdgeInfo from "../SelectionInfoHaut/SelectionInfoHaut";
 
+
 const SelectionInfo = ({ styleData }) => {
   const defaultContent = <div>{styleData.infos.titre}</div>;
 
@@ -27,10 +28,11 @@ const SelectionInfo = ({ styleData }) => {
     const screenHeight = window.innerHeight; // Récupérer la hauteur de l'écran
     console.log(screenWidth, screenHeight);
     const box = parentRef.current.querySelector(".box");
+    const maison = parentRef.current.querySelector(".maison");
 
     if (info.point.x < 250) {
       // Dragged to the left edge
-      setInfoContent(<LeftEdgeInfo styleData={styleData} />);
+      setInfoContent(<LeftEdgeInfo styleData={styleData} onCloseClick={handleCustomModeDisable} resetBoxSize={resetBoxSize} />);
       box.style.width = "90vw";
       box.style.height = "90vh";
       setIsCustomRadius(true); // Activer le mode personnalisé
@@ -42,7 +44,7 @@ const SelectionInfo = ({ styleData }) => {
       setIsCustomRadius(true); // Activer le mode personnalisé
     } else if (info.point.y < 150) {
       // Dragged to the top edge
-      setInfoContent(<TopEdgeInfo styleData={styleData} />);
+      setInfoContent(<TopEdgeInfo styleData={styleData} onCloseClick={handleCustomModeDisable} resetBoxSize={resetBoxSize} />);
       box.style.width = "90vw";
       box.style.height = "90vh";
 
@@ -53,6 +55,7 @@ const SelectionInfo = ({ styleData }) => {
       setInfoContent("Content for the bottom edge");
       box.style.width = "90vw";
       box.style.height = "90vh";
+      maison.style.color = "red";
       setIsCustomRadius(true); // Activer le mode personnalisé
       navigate("/");
     } else {
@@ -83,39 +86,136 @@ const SelectionInfo = ({ styleData }) => {
       box.style.height = ""; // Réinitialisez la hauteur à la valeur par défaut (vide)
     }
   };
-
-  return (
-    <div className="example-container" ref={parentRef}>
-      <motion.div
-        style={{
-          x,
-          y,
-          touchAction: "none",
-          borderRadius,
-        }}
-        className="box"
-        initial={{opacity: 0, scale: 0}}
-        animate={{opacity: 1, scale: 1}} // Utilisez le contrôle d'animation pour l'animation de la boîte
-        transition={{duration: 0.5}}
-
-        drag={isDragEnabled} // Activez ou désactivez le drag en fonction de isCustomRadius
-        dragConstraints={parentRef}
-        dragDirectionLock
-        dragSnapToOrigin
-        dragElastic={0.1}
-        whileDrag={{
-          scale: 1.1,
-        }}
-        onDragEnd={handleDragEnd}
-      >
-        <div className="GenreName">{infoContent}</div>
-      </motion.div>
-        <h2 className="histoire">Histoire</h2>
-        <h2 className="sous-genre">Sous-genre</h2>
-        <h2 className="instruments">Instruments</h2>
-        <img className="maison" src="../../media/maison.svg"/>  
-    </div>
-  );
-};
-
-export default SelectionInfo;
+  
+    // Utilisez useAnimation pour contrôler les animations
+    const histoireControls = useAnimation();
+    const sousGenreControls = useAnimation();
+    const instrumentsControls = useAnimation();
+    const maisonControls = useAnimation();
+    const boxControls = useAnimation(); // Contrôle pour la div "box"
+  
+    // Animation initiale pour chaque élément
+    const initialHistoire = {
+      opacity: 0,
+      x: -250, // Animation initiale personnalisée pour histoire
+      y: 0,
+    };
+  
+    const initialSousGenre = {
+      opacity: 0,
+      x: -250, // Animation initiale personnalisée pour sous-genre
+      y: 0,
+    };
+  
+    const initialInstruments = {
+      opacity: 0,
+      x: 250, // Animation initiale personnalisée pour instruments
+      y: 0,
+    };
+  
+    const initialMaison = {
+      opacity: 0,
+      x: 0,
+      y: -250, // Animation initiale personnalisée pour maison
+    };
+  
+    // Animation finale pour chaque élément (peut être la même)
+    const animateAnimation = {
+      opacity: 1,
+      x: 0,
+      y: 0,
+    };
+  
+    // Utilisez useEffect pour déclencher les animations après le montage du composant
+    useEffect(() => {
+      // Démarrez les animations après un léger délai
+      const startAnimations = async () => {
+         histoireControls.start(animateAnimation);
+         sousGenreControls.start(animateAnimation);
+         instrumentsControls.start(animateAnimation);
+         maisonControls.start(animateAnimation);
+  
+        // Démarrer l'animation de la div "box" après un délai
+        await new Promise((resolve) => setTimeout(resolve, 500)); // Délai de 500 ms
+        await boxControls.start({
+          opacity: 1,
+          scale: 1,
+          transition: { duration: 1 }, // Durée de l'animation de la boîte
+        });
+      };
+  
+      startAnimations();
+    }, [histoireControls, sousGenreControls, instrumentsControls, maisonControls, boxControls]);
+  
+    return (
+      <div className="example-container" ref={parentRef}>
+        <motion.div
+          className="box-container"
+          
+          initial={{ opacity: 0, scale: 0 }} // Animation initiale pour la boîte
+          animate={boxControls} // Utilisez le contrôle d'animation pour l'animation de la boîte
+          transition={{ duration: 1 }} // Durée de l'animation de la boîte
+        
+        >
+          <motion.div
+            style={{
+              x,
+              y,
+              touchAction: "none",
+              borderRadius,
+            }}
+            className="box"
+            initial={{ opacity: 0, scale: 0 }} // Animation initiale pour la boîte
+            animate={{opacity: 1, scale: 1}} // Utilisez le contrôle d'animation pour l'animation de la boîte
+            transition={{ duration: 2 }} // Durée de l'animation de la boîte
+    
+            drag={isDragEnabled} // Activez ou désactivez le drag en fonction de isCustomRadius
+            dragConstraints={parentRef}
+            dragDirectionLock
+            dragSnapToOrigin
+            dragElastic={0.1}
+            whileDrag={{
+              scale: 1.1,
+            }}
+            onDragEnd={handleDragEnd}
+          >
+            <div className="GenreName">{infoContent}</div>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className="histoire"
+          initial={initialHistoire}
+          animate={histoireControls}
+          transition={{ duration: 1 }}
+        >
+          Histoire
+        </motion.div>
+        <motion.div
+          className="sous-genre"
+          initial={initialSousGenre}
+          animate={sousGenreControls}
+          transition={{ duration: 1 }}
+        >
+          Sous-genre
+        </motion.div>
+        <motion.div
+          className="instruments"
+          initial={initialInstruments}
+          animate={instrumentsControls}
+          transition={{ duration: 1 }}
+        >
+          Instruments
+        </motion.div>
+        <motion.div
+          className="maison"
+          initial={initialMaison}
+          animate={maisonControls}
+          transition={{ duration: 1 }}
+        >
+          <img src="../../media/maison.svg" alt="maison" />
+        </motion.div> 
+      </div>
+    );
+  };
+  
+  export default SelectionInfo;

@@ -1,13 +1,20 @@
 import React from "react";
 
-const LeftEdgeInfo = ({ styleData }) => {
+
+
+const LeftEdgeInfo = ({ styleData, onCloseClick, resetBoxSize }) => {
+
+  const handleCrossClick = () => {
+    // Appelez la fonction de rappel pour désactiver le mode personnalisé
+    onCloseClick();
+  
+    resetBoxSize();
+  };
+
   return (
-    <div>
-      <h2>Content for the left edge</h2>
-      {/* Utilisez styleData pour accéder aux données JSON */}
-      <p>{styleData.infos.titre}</p>
-      <img className="croix" src="../../media/croix.svg"/>
-    </div>
+    <section className="container-modal">
+      <img className="croix" src="../../media/croix.svg" onClick={handleCrossClick}/>
+    </section>
   );
 };
 
