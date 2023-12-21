@@ -11,13 +11,13 @@
     height: 90vh;
     margin: 0 auto;
     position: relative;   
-    background: #f8f8f8;
     border-radius: 5%;
 }
 
 .container-modal-gauche {
     display: flex;
     flex-direction: column;
+    background-color: #DADADA;
     width: 100%; /* Assurez-vous que la div occupe toute la largeur disponible */
     overflow-y: scroll; /* Activez la barre de défilement verticale */
     border-radius: 5% 0 0 5%;
@@ -74,14 +74,14 @@
     margin-top: 2em;
     align-items: center;
     background: none;
-    border: solid 15px #1a2653;
+    border: solid 15px #353535;
     border-radius: 25px;
     width: 50%;
     font-family: "obvia-expanded";
 }
 
 #info-droite-titre {
-    color: #1a2653;
+    color: #353535;
     font-size: 3.5em;
     text-align: center;
     margin: 0.5em;
@@ -90,7 +90,7 @@
 }
 
 #info-droite-sous-titre {
-    color: black;
+    color: #353535;
     font-size: 3em;
     text-transform: uppercase;
     font-weight: 1000;
@@ -102,7 +102,7 @@
 }
 
 #info-droite-texte {
-    color: black;
+    color: #353535;
     font-size: 2.5em;
     margin-left: 5%;
     text-align: start;

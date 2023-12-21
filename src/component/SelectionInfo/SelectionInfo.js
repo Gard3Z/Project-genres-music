@@ -18,7 +18,6 @@ const SelectionInfo = ({ styleData }) => {
   const [infoContent, setInfoContent] = useState(defaultContent);
   const [isCustomRadius, setIsCustomRadius] = useState(false); // Ajouter un état pour vérifier si la condition est remplie
   const customBorderRadius = "5%"; // Définir le borderRadius personnalisé
-  const MAGNETIC_THRESHOLD = 50; // Adjust as needed for the magnetic effect
 
   // Utilisez useNavigate pour obtenir la fonction de navigation
   const navigate = useNavigate();
@@ -35,19 +34,21 @@ const SelectionInfo = ({ styleData }) => {
       setInfoContent(<LeftEdgeInfo styleData={styleData} onCloseClick={handleCustomModeDisable} resetBoxSize={resetBoxSize} />);
       box.style.width = "90vw";
       box.style.height = "90vh";
+      box.style.border = "none";
       setIsCustomRadius(true); // Activer le mode personnalisé
     } else if (info.point.x > screenWidth - 250) {
       // Dragged to the right edge
       setInfoContent(<RightEdgeInfo styleData={styleData} onCloseClick={handleCustomModeDisable} resetBoxSize={resetBoxSize} />);
       box.style.width = "90vw";
       box.style.height = "90vh";
+      box.style.border = "none";
       setIsCustomRadius(true); // Activer le mode personnalisé
     } else if (info.point.y < 150) {
       // Dragged to the top edge
       setInfoContent(<TopEdgeInfo styleData={styleData} onCloseClick={handleCustomModeDisable} resetBoxSize={resetBoxSize} />);
       box.style.width = "90vw";
       box.style.height = "90vh";
-
+      box.style.border = "none";
       setIsCustomRadius(true); // Activer le mode personnalisé
     } else if (info.point.y > screenHeight - 300) {
       console.log(info.point.y);
@@ -55,7 +56,6 @@ const SelectionInfo = ({ styleData }) => {
       setInfoContent("Content for the bottom edge");
       box.style.width = "90vw";
       box.style.height = "90vh";
-      maison.style.color = "red";
       setIsCustomRadius(true); // Activer le mode personnalisé
       navigate("/");
     } else {
@@ -84,6 +84,7 @@ const SelectionInfo = ({ styleData }) => {
     if (box) {
       box.style.width = ""; // Réinitialisez la largeur à la valeur par défaut (vide)
       box.style.height = ""; // Réinitialisez la hauteur à la valeur par défaut (vide)
+      box.style.border = ""; // Réinitialisez la bordure à la valeur par défaut (vide)
     }
   };
   

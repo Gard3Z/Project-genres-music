@@ -18,7 +18,6 @@ const RightEdgeInfo = ({ styleData, onCloseClick, resetBoxSize }) => {
           <h2 id="info-droite-titre">{styleData.infos.titre}</h2>
         </div>
         <h3 id="info-droite-sous-titre">Un peu de contexte</h3>
-        {/* Utilisez styleData pour accéder aux données JSON */}
         <p id="info-droite-texte">{styleData.infos.contexte}</p>
         <h3 id="info-droite-sous-titre">Quel est sont histoire ?</h3>
         <p id="info-droite-texte">{styleData.infos.histoire}</p>

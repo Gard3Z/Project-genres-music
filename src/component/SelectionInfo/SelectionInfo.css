@@ -52,14 +52,14 @@ body {
     justify-content: center;
     align-items: center;
     
-    border: solid 10px #f8f8f8;
+    border: solid 10px #DADADA;
     z-index: 1000;
 }
   
 .GenreName {
     text-align: center;
     vertical-align: middle;
-    color: #f8f8f8;
+    color: #DADADA;
     font-size: 1.5em;
     font-weight: 500;
 }
@@ -70,7 +70,7 @@ body {
     font-weight: 1000;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #f8f8f846;
+    color: #DADADA46;
     right: 5%;
 }
 
@@ -80,7 +80,7 @@ body {
     font-weight: 1000;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #f8f8f846;
+    color: #DADADA46;
     left: 5%;
 }
 
@@ -90,15 +90,15 @@ body {
     font-weight: 1000;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #f8f8f846;
-    top: 15%; /* Place le sous-genre en haut */
+    color: #DADADA46;
+    top: 17%;
     rotate: -90deg;
 }
 
 .maison {
     position: absolute;
     width: 5%;
-    color: #f8f8f846;
+    color: #DADADA46;
     bottom: 10%; /* Place le sous-genre en haut */
 }
 

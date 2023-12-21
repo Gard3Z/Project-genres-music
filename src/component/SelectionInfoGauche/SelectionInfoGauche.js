@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./SelectionInfoGauche.css";
 
 
 const LeftEdgeInfo = ({ styleData, onCloseClick, resetBoxSize }) => {
@@ -12,8 +12,21 @@ const LeftEdgeInfo = ({ styleData, onCloseClick, resetBoxSize }) => {
   };
 
   return (
-    <section className="container-modal">
+    <section className="container-modal" id="container-modal-left">
       <img className="croix" src="../../media/croix.svg" onClick={handleCrossClick}/>
+      <div className="container-info-gauche-titre">
+          <h2 id="info-gauche-titre">{styleData.infos.titre}</h2>
+      </div>
+    <div className="container-list">
+      <ul className="instrument-list">
+        {styleData.infos.instrument.map((instrument, index) => (
+          <li key={index} className={`instrument-item ${index >= 6 ? 'two-columns' : ''}`}>
+            {instrument}
+          </li>
+        ))}
+      </ul>
+    </div>
+
     </section>
   );
 };
